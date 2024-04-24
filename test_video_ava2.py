@@ -205,6 +205,7 @@ def run(args, d_cfg, model, device, transform, class_names):
                             (255, 255, 255),
                             2,
                             cv2.LINE_AA)
+                video_clip=[]
             # Write frame to output video
             video_writer.write(frame)
         else:
