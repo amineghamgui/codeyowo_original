@@ -157,7 +157,7 @@ def run(args, d_cfg, model, device, transform, class_names):
             iteration_time = iteration_end_time - iteration_start_time
             iteration_times.append(iteration_time)
             cv2.putText(frame,
-              f'Count : {len(video_clip)/iteration_time}',
+              f'Count : {1/iteration_time}',
               (30, 170),
               cv2.FONT_HERSHEY_SIMPLEX,
               1,
