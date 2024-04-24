@@ -54,8 +54,8 @@ def run(args, d_cfg, model, device, transform, class_names):
     # path to video
     path_to_video = os.path.join(d_cfg['data_root'], 'videos_15min', args.video)
     
-    gif = imageio.get_reader(path_to_video, 'gif')
-    
+    # gif = imageio.get_reader(path_to_video, 'gif')
+    gif = imageio.get_reader(path_to_video)
             # Obtient le nombre total de frames dans le GIF
     num_frames = len(gif)
     # video
