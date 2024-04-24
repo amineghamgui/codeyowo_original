@@ -64,7 +64,7 @@ def run(args, d_cfg, model, device, transform, class_names):
 
     save_size = (640, 480)
     save_name = os.path.join(save_path, 'detection.gif')  # Change extension to .gif
-    fps = 15.0
+    fps = 25.0
     
     # Create a list to store frames for gif creation
     gif_frames = []
