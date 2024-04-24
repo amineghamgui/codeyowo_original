@@ -180,7 +180,7 @@ def run(args, d_cfg, model, device, transform, class_names):
     end_ram = psutil.virtual_memory().used
     print('RAM used:', end_ram - start_ram)
     print("FPS for model only:", len(time_global) / sum(time_global))
-    print("Number of frames:", num_frames)
+    # print("Number of frames:", num_frames)
     print("Number of iterations:", len(iteration_times))
 
 
