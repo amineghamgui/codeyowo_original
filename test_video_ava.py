@@ -60,10 +60,21 @@ def run(args, d_cfg, model, device, transform, class_names):
     num_frames = len(gif)
     # video
     video = cv2.VideoCapture(path_to_video)
-    fourcc = cv2.VideoWriter_fourcc(*'FMP4')
+    fourcc= cv2.VideoWriter_fourcc(*'mp4v')
+    # fourcc = cv2.VideoWriter_fourcc(*'FMP4')
 
+
+
+    
+    #save_name = os.path.join(save_path, 'detection.mp4')  # Change extension to .mp4
+    
+
+
+
+
+    
     save_size = (640, 480)
-    save_name = os.path.join(save_path, 'detection.gif')  # Change extension to .gif
+    save_name = os.path.join(save_path, 'detection.mp4')  # Change extension to .gif
     fps = 25.0
     
     # Create a list to store frames for gif creation
