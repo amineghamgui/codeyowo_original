@@ -74,7 +74,7 @@ def run(args, d_cfg, model, device, transform, class_names):
     iteration_times = []
     time_global = []
     start_ram = psutil.virtual_memory().used
-
+    video_clip=[]
     # Loop through each frame in the video
     while True:
         iteration_start_time = time.time()
