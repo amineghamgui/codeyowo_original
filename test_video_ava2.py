@@ -120,6 +120,7 @@ def run(args, d_cfg, model, device, transform, class_names):
     time_global = []
     start_ram = psutil.virtual_memory().used
     video_clip=[]
+    bboxes=[] #tracer bboxes sur les autre frames si bboxes != []
     # Loop through each frame in the video
     while True:
         iteration_start_time = time.time()
