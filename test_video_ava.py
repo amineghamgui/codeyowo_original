@@ -57,7 +57,8 @@ def run(args, d_cfg, model, device, transform, class_names):
     # Open the video file
     video = cv2.VideoCapture(path_to_video)
     # Get video properties
-    fps = video.get(cv2.CAP_PROP_FPS)
+    #fps = video.get(cv2.CAP_PROP_FPS)
+    fps=30
     width = int(video.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(video.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
@@ -150,13 +151,21 @@ def run(args, d_cfg, model, device, transform, class_names):
                     for t in range(len(text)):
                         cv2.putText(frame, text[t], coord[t], font, 0.25, (0, 0, 0), 1)
 
-            # Write frame to output video
-            video_writer.write(frame)
+
 
             iteration_end_time = time.time()
             iteration_time = iteration_end_time - iteration_start_time
             iteration_times.append(iteration_time)
-
+            cv2.putText(frame,
+              f'Count : {len(video_clip)/iteration_time}',
+              (30, 170),
+              cv2.FONT_HERSHEY_SIMPLEX,
+              1,
+              (255, 255, 255),
+              2,
+              cv2.LINE_AA)
+                        # Write frame to output video
+            video_writer.write(frame)
         else:
             break
 
