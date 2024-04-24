@@ -158,7 +158,7 @@ def run(args, d_cfg, model, device, transform, class_names):
             iteration_times.append(iteration_time)
             cv2.putText(frame,
               f'FPS : {1/iteration_time}',
-              (30, 170),
+              (20, 20),
               cv2.FONT_HERSHEY_SIMPLEX,
               1,
               (255, 255, 255),
