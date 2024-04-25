@@ -239,7 +239,7 @@ def run(args, d_cfg, model, device, transform, class_names):
     print("FPS for model only:", len(time_global) / sum(time_global))
     # print("Number of frames:", num_frames)
     print("Number of iterations:", len(iteration_times))
-    print("nombre de fois d'utilisation de modeele")
+    print("nombre de fois d'utilisation de modeele : ",i)
 
 
 
