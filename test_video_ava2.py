@@ -122,12 +122,16 @@ def run(args, d_cfg, model, device, transform, class_names):
     video_clip=[]
     bboxes=[] #tracer bboxes sur les autre frames si bboxes != []
     # Loop through each frame in the video
+    i=0
     while True:
         iteration_start_time = time.time()
-
+        
+        
         ret, frame = video.read()
 
         if ret:
+            i=i+1
+            print("nobre de frame itere ",i )
             # Convert frame to PIL image
             frame_pil = Image.fromarray(frame)
 
