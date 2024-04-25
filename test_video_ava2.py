@@ -130,8 +130,8 @@ def run(args, d_cfg, model, device, transform, class_names):
         ret, frame = video.read()
 
         if ret:
-            i=i+1
-            print("nobre de frame itere ",i )
+            
+            
             # Convert frame to PIL image
             frame_pil = Image.fromarray(frame)
 
@@ -145,6 +145,7 @@ def run(args, d_cfg, model, device, transform, class_names):
             orig_h, orig_w = frame.shape[:2]
             if len(video_clip) == d_cfg['len_clip']:
                 # Transform
+                i=i+1
                 x, _ = transform(video_clip)
                 x = torch.stack(x, dim=1)
                 x = x.unsqueeze(0).to(device)  # [B, 3, T, H, W], B=1
@@ -238,6 +239,7 @@ def run(args, d_cfg, model, device, transform, class_names):
     print("FPS for model only:", len(time_global) / sum(time_global))
     # print("Number of frames:", num_frames)
     print("Number of iterations:", len(iteration_times))
+    print("nombre de fois d'utilisation de modeele")
 
 
 
