@@ -153,7 +153,7 @@ def run(args, d_cfg, model, device, transform, class_names):
     
                 # Batch size = 1
                 bboxes = batch_bboxes[0]
-    
+            if(len(bboxes)!=0):
                 # Visualize detection results
                 for bbox in bboxes:
                     x1, y1, x2, y2 = bbox[:4]
