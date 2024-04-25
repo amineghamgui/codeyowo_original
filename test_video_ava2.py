@@ -201,10 +201,10 @@ def run(args, d_cfg, model, device, transform, class_names):
                         for t in range(len(text)):
                             cv2.putText(frame, text[t], coord[t], font, 0.25, (0, 0, 0), 1)
     
-                iteration_end_time = time.time()
-                iteration_time = iteration_end_time - iteration_start_time
-                iteration_times.append(iteration_time)
-                cv2.putText(frame,
+            iteration_end_time = time.time()
+            iteration_time = iteration_end_time - iteration_start_time
+            iteration_times.append(iteration_time)
+            cv2.putText(frame,
                             f'FPS : {1/iteration_time}',
                             (20, 20),
                             cv2.FONT_HERSHEY_SIMPLEX,
