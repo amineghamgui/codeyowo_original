@@ -142,6 +142,7 @@ def train():
                       trainable=True,
                       resume=args.resume)
     model = net
+    
     model = model.to(device).train()
 
     # SyncBatchNorm
